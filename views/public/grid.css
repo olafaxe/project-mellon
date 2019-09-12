@@ -37,9 +37,18 @@ body {
 }
 .ola-container {
   grid-area: cmnt;
-  margin: auto;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1% 1fr 1%;
+  grid-template-rows: 1% 1fr 1%;
+  grid-template-areas:
+    ". . ."
+    ". logo ."
+    ". . .";
 }
 .main-ola {
+  grid-area: logo;
   margin: auto;
   z-index: -9999;
 }
