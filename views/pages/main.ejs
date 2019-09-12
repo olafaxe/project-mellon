@@ -20,9 +20,9 @@
         <h2>User: <%=username%></h2>
         <%}%>
         <h4>Other cool peeps:</h4>
-        <%users.forEach(e => {%>
+        <%users.forEach(e => {if(e.user != username){%>
         <p><%=e.user%></p>
-        <%});%>
+        <%}});%>
       </div>
       <div class="ola-container"><img class="main-ola" src="ola.png" /></div>
       <div class="logout-cont">
