@@ -37,12 +37,11 @@ body {
 }
 .ola-container {
   grid-area: cmnt;
-  position: relative;
+  margin: auto;
 }
 .main-ola {
-  position: absolute;
-  top: 50px;
-  left: 75px;
+  margin: auto;
+  z-index: -9999;
 }
 
 .main-content {

@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="main-container">
+      <div class="ola-container"><img class="main-ola" src="ola.png" /></div>
       <% if(typeof username != "undefined") {%>
       <div class="main-content">
         <h1>LOGGED IN as</h1>
@@ -24,7 +25,6 @@
         <p><%=e.user%></p>
         <%}});%>
       </div>
-      <div class="ola-container"><img class="main-ola" src="ola.png" /></div>
       <div class="logout-cont">
         <a class="logout-btn login-button" href="/bye">Logout</a>
       </div>
