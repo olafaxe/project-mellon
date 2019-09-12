@@ -106,6 +106,16 @@ registerBtn.addEventListener("click", e => {
   regSubmitBtn.classList.add("reg-item");
   regSubmitBtn.innerText = "Finish";
 
+  regSubmitBtn.addEventListener("click", e => {
+    if (
+      regPasswordInput.value === "" ||
+      regPasswordRepInput.value === "" ||
+      regPasswordInput.value != regPasswordRepInput.value
+    ) {
+      event.preventDefault();
+    }
+  });
+
   let closeBtn = document.createElement("div");
   closeBtn.classList.add("closeBtn");
   closeBtn.classList.add("fas");
