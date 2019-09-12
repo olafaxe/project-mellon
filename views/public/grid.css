@@ -26,6 +26,7 @@ body {
 
 .reg-comment {
   grid-area: cmnt;
+  text-align: center;
   margin: auto;
 }
 .ola-container {
@@ -47,6 +48,7 @@ body {
 }
 
 .register-container {
+  margin: auto;
   grid-area: main;
   z-index: 999;
   display: flex;
@@ -73,6 +75,7 @@ body {
   grid-area: main;
   display: flex;
   flex-direction: column;
+  margin: auto;
   width: 250px;
   height: 245px;
   border: 10px solid rgb(107, 103, 103);
@@ -104,6 +107,9 @@ body {
 .login-button-submit {
   background-color: rgb(30, 133, 64);
   padding: 15px;
+}
+.regSubmitBtn {
+  background-color: rgb(104, 168, 207);
 }
 
 .logout-btn {
@@ -137,4 +143,8 @@ a:active {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 0%;
+}
+
+.reg-item {
+  margin-bottom: 15px;
 }

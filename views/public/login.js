@@ -28,6 +28,7 @@ registerBtn.addEventListener("click", e => {
 
   let regUserCont = document.createElement("div");
   regForm.appendChild(regUserCont);
+  regUserCont.classList.add("reg-item");
   let regUserLabel = document.createElement("label");
   regUserLabel.setAttribute("for", "reguser");
   regUserLabel.innerText = "Username";
@@ -41,6 +42,7 @@ registerBtn.addEventListener("click", e => {
 
   let regEmailCont = document.createElement("div");
   regForm.appendChild(regEmailCont);
+  regEmailCont.classList.add("reg-item");
   let regEmailLabel = document.createElement("label");
   regEmailLabel.setAttribute("for", "regemail");
   regEmailLabel.innerText = "Email";
@@ -54,6 +56,7 @@ registerBtn.addEventListener("click", e => {
 
   let regPasswordCont = document.createElement("div");
   regForm.appendChild(regPasswordCont);
+  regPasswordCont.classList.add("reg-item");
   let regPasswordLabel = document.createElement("label");
   regPasswordLabel.setAttribute("for", "regpassword");
   regPasswordLabel.innerText = "Password";
@@ -67,6 +70,7 @@ registerBtn.addEventListener("click", e => {
 
   let regPasswordRepCont = document.createElement("div");
   regForm.appendChild(regPasswordRepCont);
+  regPasswordRepCont.classList.add("reg-item");
   let regPasswordRepLabel = document.createElement("label");
   regPasswordRepLabel.setAttribute("for", "regpasswordrep");
   regPasswordRepLabel.innerText = "Repeat password";
@@ -84,6 +88,8 @@ registerBtn.addEventListener("click", e => {
   regSubmitBtn.setAttribute("id", "regSubmit");
   regSubmitBtn.setAttribute("name", "regSubmit");
   regSubmitBtn.classList.add("regSubmitBtn");
+  regSubmitBtn.classList.add("login-button");
+  regSubmitBtn.classList.add("reg-item");
   regSubmitBtn.innerText = "Finish";
 
   let closeBtn = document.createElement("div");
