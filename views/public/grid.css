@@ -24,6 +24,12 @@ body {
     ". btn .";
 }
 
+@media screen and (max-width: 460px) {
+  .main-container {
+    grid-template-columns: 5% 1fr 5%;
+  }
+}
+
 .reg-comment {
   grid-area: cmnt;
   text-align: center;
