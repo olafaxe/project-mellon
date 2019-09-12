@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="animation.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
       rel="stylesheet"
@@ -13,9 +14,12 @@
   </head>
   <body>
     <div class="main-container">
+      <% if(typeof reguser != "undefined") {%>
+      <h3 class="reg-comment">Registered!</h3>
+      <%}%>
       <div class="login-container">
         <h2 class="login-title login-item">Login</h2>
-        <form class="login-item login-form" method="POST" action="/">
+        <form class="login-item login-form" method="POST" action="/main">
           <div class="login-inner-item">
             <label class="login-username" for="username">Username</label>
             <input
@@ -60,5 +64,6 @@
       </div>
     </div>
     <script src="login.js"></script>
+    <script src="https://kit.fontawesome.com/7c990ce83f.js"></script>
   </body>
 </html>

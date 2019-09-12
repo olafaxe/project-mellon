@@ -1,0 +1,29 @@
+.close-animation {
+  animation-name: fadeout;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.open-animation {
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+@keyframes fadeout {
+  from {
+    opacity: 100;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
