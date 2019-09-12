@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="grid.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="login-container">
+        <h2 class="login-title login-item">Login</h2>
+        <form class="login-item login-form" method="POST" action="/">
+          <div class="login-inner-item">
+            <label class="login-username" for="username">Username</label>
+            <input
+              class="login-input"
+              type="text"
+              id="username"
+              name="username"
+            />
+          </div>
+          <div class="login-inner-item">
+            <label class="login-password" for="password">Password</label>
+            <input
+              class="login-input"
+              type="password"
+              id="password"
+              name="password"
+            />
+          </div>
+          <br />
+          <div class="login-inner-item login-submit">
+            <button
+              class="login-button login-button-submit"
+              type="submit"
+              id="submit"
+              name="submit"
+            >
+              Login
+            </button>
+          </div>
+          <h4 class="login-breaker">or</h4>
+          <div class="login-inner-item login-register">
+            <button
+              class="login-button login-button-register"
+              type="button"
+              id="register"
+              name="register"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
