@@ -12,6 +12,13 @@ submitLogin.addEventListener("submit", e => {
   }
 });
 
+mainCont.addEventListener("keydown", e => {
+  var key = e.which || e.keyCode;
+  if (key === 13) {
+    event.preventDefault();
+  }
+});
+
 registerBtn.addEventListener("click", e => {
   let regCont = document.createElement("div");
   regCont.classList.add("register-container");
