@@ -37,9 +37,17 @@ app.post("/", (req, res) => {
   const reguser = req.body.reguser;
   const regemail = req.body.regemail;
   const regpassword = req.body.regpassword;
+  const regpasswordrep = req.body.regpasswordrep;
 
   const usersCollection = db.collection("users");
-
+  if (
+    reguser === "" ||
+    regemail === "" ||
+    regpassword === "" ||
+    regpassword != regpasswordrep
+  ) {
+    return;
+  }
   res.render("pages/index.ejs", { reguser });
   usersCollection.insertMany([
     { user: reguser, email: regemail, password: regpassword }
