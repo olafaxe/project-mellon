@@ -33,6 +33,13 @@ registerBtn.addEventListener("click", e => {
   regForm.setAttribute("method", "POST");
   regForm.setAttribute("action", "/");
 
+  regForm.addEventListener("keydown", e => {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+      event.preventDefault();
+    }
+  });
+
   let regUserCont = document.createElement("div");
   regForm.appendChild(regUserCont);
   regUserCont.classList.add("reg-item");
