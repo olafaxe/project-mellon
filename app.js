@@ -63,7 +63,7 @@ app.post("/main", (req, res) => {
   usersCollection.find({}).toArray(function(err, users) {
     users.forEach(e => {
       if (username === e.user && password === e.password) {
-        res.render("pages/main.ejs", { username, email, password });
+        res.render("pages/main.ejs", { username, email, password, users });
       } else {
         return;
       }

@@ -141,20 +141,3 @@ mainCont.addEventListener("click", e => {
 registerBtn.addEventListener("click", e => {
   submitRegister = document.querySelector(".register-form");
 });
-
-mainCont.addEventListener("click", e => {
-  if (e.target.classList.contains("regSubmitBtn")) {
-    submitRegister.addEventListener("submit", e => {
-      //   if (
-      //     reguser.value === "" ||
-      //     regemail.value === "" ||
-      //     regpassword.value === "" ||
-      //     regpasswordrep.value === ""
-      //   ) {
-      //     event.preventDefault();
-      //   } else {
-      //     console.log("registering...");
-      //   }
-    });
-  }
-});
