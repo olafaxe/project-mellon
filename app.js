@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 const MongoClient = require("mongodb").MongoClient;
-const url = "mongodb://localhost:27017";
+const url = process.env.MONGODB_URI || "mongodb://localhost:27017";
 const client = new MongoClient(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -22,7 +22,7 @@ let db;
 
 client.connect(function(err) {
   if (err) throw err;
-  db = client.db("mellon");
+  db = client.db("heroku_08126dh9");
 });
 
 app.get("/", (req, res) => {
