@@ -48,7 +48,7 @@ app.post("/", (req, res) => {
   ) {
     return;
   }
-  res.render("pages/index.ejs", { reguser });
+  res.render("pages/index", { reguser });
   usersCollection.insertMany([
     { user: reguser, email: regemail, password: regpassword }
   ]);
@@ -59,16 +59,21 @@ app.post("/main", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
   const usersCollection = db.collection("users");
+  let fail = false;
 
   usersCollection.find({}).toArray(function(err, users) {
     users.forEach(e => {
       if (username === e.user && password === e.password) {
-        res.render("pages/main.ejs", { username, email, password, users });
+        fail = false;
+        res.render("pages/main", { username, email, password, users });
       } else {
-        return;
+        fail = true;
       }
-      console.log(e.user);
     });
+    if (fail) {
+      res.render("pages/index");
+    }
+    // res.redirect("/");
   });
 });
 

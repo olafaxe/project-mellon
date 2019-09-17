@@ -7,8 +7,6 @@ let registerBtn = document.querySelector(".login-button-register");
 submitLogin.addEventListener("submit", e => {
   if (username.value === "" || password.value === "") {
     event.preventDefault();
-  } else {
-    console.log("logging in...");
   }
 });
 
