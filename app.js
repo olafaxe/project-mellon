@@ -29,6 +29,14 @@ app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
+app.get("/loginform", (req, res) => {
+  res.render("pages/loginform");
+});
+
+app.get("/regform", (req, res) => {
+  res.render("pages/regform");
+});
+
 app.get("/bye", (req, res) => {
   res.render("pages/index");
 });
@@ -54,27 +62,35 @@ app.post("/", (req, res) => {
   ]);
 });
 
+app.get("/check", (req, res) => {
+  const username = req.body.username;
+  const email = req.body.email;
+  const password = req.body.password;
+  const usersCollection = db.collection("users");
+  usersCollection.find({}).toArray(function(err, users) {
+    users.forEach(e => {
+      console.log(e.user, e.password, e.password);
+    });
+  });
+});
+
 app.post("/main", (req, res) => {
   const username = req.body.username;
   const email = req.body.email;
   const password = req.body.password;
   const usersCollection = db.collection("users");
-  let fail = false;
 
-  usersCollection.find({}).toArray(function(err, users) {
-    users.forEach(e => {
-      if (username === e.user && password === e.password) {
-        fail = false;
-        res.render("pages/main", { username, email, password, users });
-      } else {
-        fail = true;
-      }
+  if (typeof username === "undefined" || typeof password === "undefined") {
+    res.redirect("/");
+  } else {
+    usersCollection.find({}).toArray(function(err, users) {
+      users.forEach(e => {
+        if (username === e.user && password === e.password) {
+          res.render("pages/main", { username, email, password, users });
+        }
+      });
     });
-    if (fail) {
-      res.render("pages/index");
-    }
-    // res.redirect("/");
-  });
+  }
 });
 
 app.listen(port, () => {
