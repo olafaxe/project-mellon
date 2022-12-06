@@ -19,7 +19,7 @@
   "homepage": "https://github.com/olafaxe/project-mellon#readme",
   "dependencies": {
     "ejs": "^2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongodb": "^3.3.2",
     "nodemon": "^1.19.2"
   }
